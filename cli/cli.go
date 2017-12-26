@@ -16,5 +16,5 @@ func (c *CLI) Run(args []string) int {
 		// any other errors ((*cli.CLI).Run may not return it.)
 		return 3
 	}
-	return (*cli.CLI).Run((*cli.CLI)(c), args)
+	return (*cli.CLI)(c).Run(args)
 }
